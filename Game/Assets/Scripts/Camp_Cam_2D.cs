@@ -12,7 +12,8 @@ public class Camp_Cam_2D : MonoBehaviour
     [SerializeField] float yMin = -1;
     [SerializeField] float yMax = 1;
     [SerializeField] float speed = 1;
-    [SerializeField] float centerOffset = 1;
+    [SerializeField] float centerOffsetX = 1;
+    [SerializeField] float centerOffsetY = 1;
 
     Transform t;
     SpriteRenderer spriteRendererTarget;
@@ -25,9 +26,10 @@ public class Camp_Cam_2D : MonoBehaviour
 
     void LateUpdate()
     {
-        float flipValue = spriteRendererTarget.flipX ? 1 : -1;
-        float x = Mathf.Clamp(target.position.x + (target.transform.right.x * flipValue * centerOffset), xMin, xMax);
-        float y = Mathf.Clamp(target.position.y, yMin, yMax);
+        float flipValueX = spriteRendererTarget.flipX ? 1 : -1;
+        float flipValueY = spriteRendererTarget.flipY ? 1 : -1;
+        float x = Mathf.Clamp(target.position.x + (target.transform.right.x * flipValueX * centerOffsetX), xMin, xMax);
+        float y = Mathf.Clamp(target.position.y + (target.transform.up.y * flipValueY * centerOffsetY), yMin, yMax);
 
         t.position = Vector3.Lerp(t.position, new Vector3(x, y, t.position.z), speed * Time.deltaTime);
     }

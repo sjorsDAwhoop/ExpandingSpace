@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
 
         if (theCollision.gameObject.tag == "enemy")
         {
-            animator.SetBool("hit",true)
+            animator.SetBool("hit", true);
         }
 
     }
