@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Expanding Space",
+"dataUrl": "ExpandingSpace-master.data.unityweb",
+"asmCodeUrl": "ExpandingSpace-master.asm.code.unityweb",
+"asmMemoryUrl": "ExpandingSpace-master.asm.memory.unityweb",
+"asmFrameworkUrl": "ExpandingSpace-master.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

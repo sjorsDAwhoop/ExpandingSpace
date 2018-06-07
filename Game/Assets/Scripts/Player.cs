@@ -6,11 +6,16 @@ public class Player : MonoBehaviour
 {
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    
+
     public Rigidbody2D rb;
     public AudioSource JumpSound;
+
     public float speedwalk = 0.1f;
     public float jumpheight = 12f;
     public bool isgrounded = true;
+    int gethealth = HealthBar.health;
+
 
     void Start()
 
@@ -18,6 +23,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+      
     }
 
     void Update()
@@ -98,6 +104,9 @@ public class Player : MonoBehaviour
         {
             
             transform.position = new Vector3(-23, 2, 0);
+            int newhealth = 3;
+            HealthBar.health = newhealth;
+            
            
         }
 
